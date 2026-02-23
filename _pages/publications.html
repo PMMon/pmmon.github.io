@@ -5,32 +5,101 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<style>
+.pub-list { margin-top: 1rem; }
+.pub-year { margin-top: 2rem; margin-bottom: 1rem; font-size: 1.4rem; font-weight: 700; }
+.pub-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+.pub-thumb {
+  width: 160px;
+  min-width: 160px;
+}
+.pub-thumb img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+.pub-content { flex: 1; }
+.pub-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+  line-height: 1.35;
+}
+.pub-title a { text-decoration: none; }
+.pub-authors, .pub-venue, .pub-links, .pub-abstract {
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+}
+.pub-venue { color: #555; }
+.pub-links a { margin-right: 0.6rem; }
+.pub-abstract { color: #333; }
 
-{% include base_path %}
+@media (max-width: 768px) {
+  .pub-item { flex-direction: column; }
+  .pub-thumb { width: 100%; min-width: 0; max-width: 280px; }
+}
+</style>
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
+{% assign pubs_sorted = site.publications | sort: "date" | reverse %}
+
+<div class="pub-list">
+  {% assign current_year = "" %}
+  {% for pub in pubs_sorted %}
+    {% assign year = pub.date | date: "%Y" %}
+    {% if year != current_year %}
+      {% assign current_year = year %}
+      <div class="pub-year">{{ year }}</div>
+    {% endif %}
+
+    <div class="pub-item">
+      <div class="pub-thumb">
+        {% if pub.thumb %}
+          <img src="{{ pub.thumb | relative_url }}" alt="Thumbnail for {{ pub.title }}">
+        {% else %}
+          <img src="{{ '/images/publications/default.png' | relative_url }}" alt="Default publication thumbnail">
+        {% endif %}
+      </div>
+
+      <div class="pub-content">
+        <div class="pub-title">
+          {% if pub.paperurl %}
+            <a href="{{ pub.paperurl }}">{{ pub.title }}</a>
+          {% else %}
+            {{ pub.title }}
+          {% endif %}
+        </div>
+
+        {% if pub.authors %}
+          <div class="pub-authors">{{ pub.authors }}</div>
+        {% endif %}
+
+        <div class="pub-venue">
+          {% if pub.venue %}{{ pub.venue }}{% endif %}
+          {% if pub.date %}, {{ pub.date | date: "%b %Y" }}{% endif %}
+        </div>
+
+        <div class="pub-links">
+          {% if pub.paperurl %}<a href="{{ pub.paperurl }}">PDF</a>{% endif %}
+          {% if pub.code %}<a href="{{ pub.code }}">Code</a>{% endif %}
+          {% if pub.slides %}<a href="{{ pub.slides }}">Slides</a>{% endif %}
+          {% if pub.poster %}<a href="{{ pub.poster }}">Poster</a>{% endif %}
+          {% if pub.website %}<a href="{{ pub.website }}">Website</a>{% endif %}
+        </div>
+
+        {% if pub.excerpt %}
+          <div class="pub-abstract">{{ pub.excerpt }}</div>
+        {% elsif pub.content and pub.content != "" %}
+          <div class="pub-abstract">{{ pub.content | markdownify | strip_html | truncate: 300 }}</div>
+        {% endif %}
+      </div>
+    </div>
   {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-
-
+</div>
