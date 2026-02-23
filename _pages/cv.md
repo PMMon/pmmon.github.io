@@ -13,24 +13,29 @@ Education
 ======
 
 
-<span style="font-size: 18px;">**Princeton University & NYU**</span>  
-Joint Research Visit<br/>
+<span style="font-size: 18px;">**[Princeton University](https://lake-lab.github.io/)**</span>  
+Research Visit<br/>
+**Location**: New Jersey, USA<br/>
+**Duration**: May 2026 - Aug 2026
+
+<span style="font-size: 18px;">**[New York University](https://www.gureckislab.org/)**</span>  
+Research Visit<br/>
 **Location**: New York, USA<br/>
 **Duration**: May 2026 - Aug 2026
 
-<span style="font-size: 18px;">**LMU Munich**</span>  
+<span style="font-size: 18px;">**[LMU Munich](https://www.lmu.de/en/index.html)**</span>  
 Doctor of Philosophy (Ph.D.)<br/>
 **Location**: Munich, Germany<br/>
 **Duration**: Oct. 2023 - Mar. 2027
 
 
-<span style="font-size: 18px;">**KTH Royal Institute of Technology**</span>  
+<span style="font-size: 18px;">**[KTH Royal Institute of Technology](https://www.kth.se/en/studies/master/systems-control-robotics/msc-systems-control-and-robotics-1.8733)**</span>  
 M.Sc. Computer Science<br/>
 **Location**: Stockholm, Sweden<br/>
 **Duration**: Aug. 2020 - Aug. 2022  
 
 
-<span style="font-size: 18px;">**Technical University of Munich**</span>  
+<span style="font-size: 18px;">**[Technical University of Munich](https://www.tum.de/en/studies/degree-programs/detail/engineering-science-bachelor-of-science-bsc)**</span>  
 B.Sc. Engineering Science<br/>
 **Location**: Munich, Germany<br/>
 **Duration**: Oct. 2016 - May 2020  
@@ -38,34 +43,34 @@ B.Sc. Engineering Science<br/>
 Work experience
 ======
 
-<span style="font-size: 18px;">**Meta AI**</span>  
+<span style="font-size: 18px;">**[Meta AI](https://ai.meta.com/research/)**</span>  
 Research Scientist Intern<br/>
 **Location**: London, UK<br/>
 **Duration**: Aug. 2025 - Feb. 2026
 
 
-<span style="font-size: 18px;">**AppliedAI Initiative**</span>  
+<span style="font-size: 18px;">**[AppliedAI Initiative](https://www.appliedai.de/en)**</span>  
 AI Engineer<br/>
 **Location**: Munich, Germany<br/>
 **Duration**: Apr. 2023 - Oct. 2023
 
 
-<span style="font-size: 18px;">**Brainaims**</span>  
+<span style="font-size: 18px;">**[Brainamics](https://brainamics.de/)**</span>  
 AI Engineer<br/>
 **Location**: Munich, Germany<br/>
 **Duration**: Aug. 2022 - Feb. 2023
 
-<span style="font-size: 18px;">**Computational Brain Science Lab (KTH)**</span>  
+<span style="font-size: 18px;">**[Computational Brain Science Lab (KTH)](https://www.kth.se/cs/cst/research/computational-brain-science-1.779076)**</span>  
 Research Assistant<br/>
 **Location**: Stockholm, Sweden<br/>
 **Duration**: Apr. 2021 - Jan. 2022  
 
-<span style="font-size: 18px;">**BMW**</span>  
+<span style="font-size: 18px;">**[BMW](https://www.bmwgroup.com/en.html)**</span>  
 Data Scientist Intern<br/>
 **Location**: Munich, Germany<br/>
 **Duration**: Apr. 2019 - Oct. 2019
 
-<span style="font-size: 18px;">**Chair of Robotics, Artificial Intelligence & Real-time Systems (TUM)**</span>  
+<span style="font-size: 18px;">**[Chair of Robotics, Artificial Intelligence & Real-time Systems (TUM)](https://www.ce.cit.tum.de/en/air/home/)**</span>  
 Research Scientist Intern<br/>
 **Location**: Munich, Germany<br/>
 **Duration**: Mar. 2018 - Oct. 2018  
