@@ -1,16 +1,123 @@
 ---
 layout: archive
-title: "Talks and presentations"
+title: "Invited Talks"
 permalink: /talks/
 author_profile: true
 ---
 
-{% if site.talkmap_link == true %}
+<style>
+.talk-list { margin-top: 1rem; }
+.talk-year {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
 
-<p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
+.talk-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e5e5;
+}
 
-{% endif %}
+.talk-thumb {
+  width: 160px;
+  min-width: 160px;
+  height: 90px;               
+  background: #fff;           
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
-{% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
-{% endfor %}
+.talk-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background: #fff;
+}
+
+.talk-content { flex: 1; }
+
+.talk-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  line-height: 1.35;
+}
+
+.talk-meta {
+  margin-top: 0.2rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.talk-meta-label {
+  font-weight: 600;
+  color: #555;
+  margin-right: 0.35rem;
+}
+
+@media (max-width: 768px) {
+  .talk-item { flex-direction: column; }
+  .talk-thumb {
+    width: 100%;
+    min-width: 0;
+    max-width: 280px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
+</style>
+
+{% assign talks_sorted = site.talks | sort: "date" | reverse %}
+
+<div class="talk-list">
+  {% assign current_year = "" %}
+  {% for talk in talks_sorted %}
+    {% assign year = talk.date | date: "%Y" %}
+    {% if year != current_year %}
+      {% assign current_year = year %}
+      <div class="talk-year">{{ year }}</div>
+    {% endif %}
+
+    <div class="talk-item">
+      <div class="talk-thumb">
+        {% if talk.thumb %}
+          <img src="{{ talk.thumb | relative_url }}" alt="Thumbnail for {{ talk.title }}">
+        {% else %}
+          <img src="{{ '/images/talks/default.png' | relative_url }}" alt="Default talk thumbnail">
+        {% endif %}
+      </div>
+
+      <div class="talk-content">
+        <div class="talk-title">{{ talk.title }}</div>
+
+        {% if talk.venue %}
+          <div class="talk-meta">
+            <span class="talk-meta-label">Series:</span>{{ talk.venue }}
+          </div>
+        {% endif %}
+
+        {% if talk.location %}
+          <div class="talk-meta">
+            <span class="talk-meta-label">Place:</span>{{ talk.location }}
+          </div>
+        {% endif %}
+
+        {% if talk.date %}
+          <div class="talk-meta">
+            <span class="talk-meta-label">Date:</span>{{ talk.date | date: "%b %-d, %Y" }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
