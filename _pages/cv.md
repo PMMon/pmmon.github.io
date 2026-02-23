@@ -75,6 +75,15 @@ Research Scientist Intern<br/>
 **Location**: Munich, Germany<br/>
 **Duration**: Mar. 2018 - Oct. 2018  
 
+Skills
+======
+- **Programming**: Python, C/C++, Matlab, Simulink, R (Markdown), ROS, SQL, Git, Ubuntu Linux, LaTeX
+- **ML Frameworks**: PyTorch, PyTorch Lightning, Keras, Scikit-learn, OpenCV, Stable-Baselines, AWS, ZenML, W&B
+- **Data Science Frameworks**: NumPy, Pandas, Dask, PySpark, MNE, SciPy
+- **Other Tools & Frameworks**: Autodesk Inventor, OpenAI Gym, MuJoCo, Metavision SDK, Furhat SDK, Blender
+- **Project Tools**: Jira, Confluence
+- **Soft Skills**: Team Management, Leadership, Teamwork, Communication, Problem Solving, Time Management
+
 Publications
 ======
 <ul>
@@ -90,12 +99,3 @@ Talks
   {% include archive-single-talk-cv.html %}
 {% endfor %}
 </ul>
-
-Skills
-======
-- **Programming**: Python, C/C++, Matlab, Simulink, R (Markdown), ROS, SQL, Git, Ubuntu Linux, LaTeX
-- **ML Frameworks**: PyTorch, PyTorch Lightning, Keras, Scikit-learn, OpenCV, Stable-Baselines, AWS, ZenML, W&B
-- **Data Science Frameworks**: NumPy, Pandas, Dask, PySpark, MNE, SciPy
-- **Other Tools & Frameworks**: Autodesk Inventor, OpenAI Gym, MuJoCo, Metavision SDK, Furhat SDK, Blender
-- **Project Tools**: Jira, Confluence
-- **Soft Skills**: Team Management, Leadership, Teamwork, Communication, Problem Solving, Time Management
