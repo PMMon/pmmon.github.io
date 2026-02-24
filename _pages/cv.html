@@ -1,0 +1,245 @@
+---
+layout: archive
+title: # "CV"
+permalink: /cv/
+author_profile: true
+redirect_from:
+  - /resume
+
+education:
+  - institution: "Princeton University"
+    website: "https://lake-lab.github.io/"
+    degree: "Research Visit"
+    location: "New Jersey, USA"
+    duration: "May 2026 - Aug 2026"
+    thumb: "/images/cv/education/princeton.png"
+
+  - institution: "New York University"
+    website: "https://www.gureckislab.org/"
+    degree: "Research Visit"
+    location: "New York, USA"
+    duration: "May 2026 - Aug 2026"
+    thumb: "/images/cv/education/nyu.png"
+
+  - institution: "LMU Munich"
+    website: "https://www.lmu.de/en/index.html"
+    degree: "Doctor of Philosophy (Ph.D.)"
+    location: "Munich, Germany"
+    duration: "Oct. 2023 - Mar. 2027"
+    thumb: "/images/cv/education/lmu.png"
+
+  - institution: "KTH Royal Institute of Technology"
+    website: "https://www.kth.se/en/studies/master/systems-control-robotics/msc-systems-control-and-robotics-1.8733"
+    degree: "M.Sc. Computer Science"
+    location: "Stockholm, Sweden"
+    duration: "Aug. 2020 - Aug. 2022"
+    thumb: "/images/cv/education/kth.png"
+
+  - institution: "Technical University of Munich"
+    website: "https://www.tum.de/en/studies/degree-programs/detail/engineering-science-bachelor-of-science-bsc"
+    degree: "B.Sc. Engineering Science"
+    location: "Munich, Germany"
+    duration: "Oct. 2016 - May 2020"
+    thumb: "/images/cv/education/tum.png"
+
+work_experience:
+  - organization: "Meta AI"
+    website: "https://ai.meta.com/research/"
+    role: "Research Scientist Intern"
+    location: "London, UK"
+    duration: "Aug. 2025 - Feb. 2026"
+    thumb: "/images/cv/work/meta.png"
+
+  - organization: "AppliedAI Initiative"
+    website: "https://www.appliedai.de/en"
+    role: "AI Engineer"
+    location: "Munich, Germany"
+    duration: "Apr. 2023 - Oct. 2023"
+    thumb: "/images/cv/work/appliedai.png"
+
+  - organization: "Brainamics"
+    website: "https://brainamics.de/"
+    role: "AI Engineer"
+    location: "Munich, Germany"
+    duration: "Aug. 2022 - Feb. 2023"
+    thumb: "/images/cv/work/brainamics.png"
+
+  - organization: "Computational Brain Science Lab (KTH)"
+    website: "https://www.kth.se/cs/cst/research/computational-brain-science-1.779076"
+    role: "Research Assistant"
+    location: "Stockholm, Sweden"
+    duration: "Apr. 2021 - Jan. 2022"
+    thumb: "/images/cv/work/kth.png"
+
+  - organization: "BMW"
+    website: "https://www.bmwgroup.com/en.html"
+    role: "Data Scientist Intern"
+    location: "Munich, Germany"
+    duration: "Apr. 2019 - Oct. 2019"
+    thumb: "/images/cv/work/bmw.png"
+
+  - organization: "Chair of Robotics, Artificial Intelligence & Real-time Systems (TUM)"
+    website: "https://www.ce.cit.tum.de/en/air/home/"
+    role: "Research Scientist Intern"
+    location: "Munich, Germany"
+    duration: "Mar. 2018 - Oct. 2018"
+    thumb: "/images/cv/work/tum.png"
+---
+
+{% include base_path %}
+
+<style>
+  .cv-list {
+    margin-top: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .cv-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1.4rem;
+    padding-bottom: 1.15rem;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .cv-thumb {
+    width: 120px;
+    min-width: 120px;
+    height: 120px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .cv-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* better for logos */
+    display: block;
+    background: #fff;
+  }
+
+  .cv-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .cv-org {
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 0 0.15rem 0;
+  }
+
+  .cv-org a {
+    text-decoration: none;
+  }
+
+  .cv-role {
+    font-size: 0.98rem;
+    margin: 0.1rem 0;
+    color: #222;
+  }
+
+  .cv-meta {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0.1rem 0;
+  }
+
+  .cv-meta strong {
+    color: #333;
+  }
+
+  @media (max-width: 768px) {
+    .cv-item {
+      flex-direction: column;
+    }
+
+    .cv-thumb {
+      width: 96px;
+      min-width: 96px;
+      height: 96px;
+    }
+  }
+</style>
+
+<h1>Education</h1>
+
+<div class="cv-list">
+  {% for edu in page.education %}
+    <div class="cv-item">
+      <div class="cv-thumb">
+        {% if edu.thumb %}
+          <img src="{{ edu.thumb | relative_url }}" alt="Logo for {{ edu.institution }}">
+        {% else %}
+          <img src="{{ '/images/cv/default-edu.png' | relative_url }}" alt="Default education thumbnail">
+        {% endif %}
+      </div>
+
+      <div class="cv-content">
+        <div class="cv-org">
+          <a href="{{ edu.website }}"><strong>{{ edu.institution }}</strong></a>
+        </div>
+        <div class="cv-role">{{ edu.degree }}</div>
+        <div class="cv-meta"><strong>Location</strong>: {{ edu.location }}</div>
+        <div class="cv-meta"><strong>Duration</strong>: {{ edu.duration }}</div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<h1>Work experience</h1>
+
+<div class="cv-list">
+  {% for job in page.work_experience %}
+    <div class="cv-item">
+      <div class="cv-thumb">
+        {% if job.thumb %}
+          <img src="{{ job.thumb | relative_url }}" alt="Logo for {{ job.organization }}">
+        {% else %}
+          <img src="{{ '/images/cv/default-work.png' | relative_url }}" alt="Default work thumbnail">
+        {% endif %}
+      </div>
+
+      <div class="cv-content">
+        <div class="cv-org">
+          <a href="{{ job.website }}"><strong>{{ job.organization }}</strong></a>
+        </div>
+        <div class="cv-role">{{ job.role }}</div>
+        <div class="cv-meta"><strong>Location</strong>: {{ job.location }}</div>
+        <div class="cv-meta"><strong>Duration</strong>: {{ job.duration }}</div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<h1>Skills</h1>
+
+<ul>
+  <li><strong>Programming</strong>: Python, C/C++, Matlab, Simulink, R (Markdown), ROS, SQL, Git, Ubuntu Linux, LaTeX</li>
+  <li><strong>ML Frameworks</strong>: PyTorch, PyTorch Lightning, Keras, Scikit-learn, OpenCV, Stable-Baselines, AWS, ZenML, W&amp;B</li>
+  <li><strong>Data Science Frameworks</strong>: NumPy, Pandas, Dask, PySpark, MNE, SciPy</li>
+  <li><strong>Other Tools &amp; Frameworks</strong>: Autodesk Inventor, OpenAI Gym, MuJoCo, Metavision SDK, Furhat SDK, Blender</li>
+  <li><strong>Project Tools</strong>: Jira, Confluence</li>
+  <li><strong>Soft Skills</strong>: Team Management, Leadership, Teamwork, Communication, Problem Solving, Time Management</li>
+</ul>
+
+<h1>Publications</h1>
+<ul>
+{% for post in site.publications reversed %}
+  {% include archive-single-cv.html %}
+{% endfor %}
+</ul>
+
+<h1>Talks</h1>
+<ul>
+{% for post in site.talks reversed %}
+  {% include archive-single-talk-cv.html %}
+{% endfor %}
+</ul>
