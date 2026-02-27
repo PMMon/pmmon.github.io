@@ -16,4 +16,5 @@ author_profile: true
 - [ACL ARR 2025 July](https://aclrollingreview.org/dates)
 - [ACL ARR 2025 May](https://2025.emnlp.org/)
 - [COLM 2025](https://colmweb.org/2025/)
+- [ACL-SRW 2025](https://acl2025-srw.github.io/)
 - [ACL ARR 2025 February](https://2025.aclweb.org/)
