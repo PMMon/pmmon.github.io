@@ -8,7 +8,9 @@ author_profile: true
 ## Reviewing
 
 ### 2026
+- [NeurIPS 2026](https://neurips.cc/)
 - [COLM 2026](https://colmweb.org/)
+- [ACL ARR 2026 March](https://aclrollingreview.org/dates)
 - [ACL ARR 2026 January](https://2026.aclweb.org/)
 
 ### 2025
