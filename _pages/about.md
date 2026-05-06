@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I'm a second-year Ph.D. student at the <a href="https://mainlp.github.io/">Munich AI & NLP Research Lab (MaiNLP)</a> at LMU Munich, under the supervision of <a href="https://bplank.github.io/">Prof. Dr. Barbara Plank</a>.
+Hi! I'm a third-year Ph.D. student at the <a href="https://mainlp.github.io/">Munich AI & NLP Research Lab (MaiNLP)</a> at LMU Munich, under the supervision of <a href="https://bplank.github.io/">Prof. Dr. Barbara Plank</a>.
 
 My research focuses on reasoning in large language models. Through extensive evaluations of both the output behavior and the inner workings of current LLMs in reasoning scenarios, my work seeks to enhance our understanding of reasoning in LLMs.
 
