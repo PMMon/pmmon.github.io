@@ -5,7 +5,7 @@ type: "Talk"
 permalink: /talks/human-like-errors-ARC
 venue: "Human & Machine Intelligence Seminar"
 location: "Princeton University"
-date: 2026-07-27
+date: 2026-07-21
 thumb: "/images/talks/princeton.png"
 ---
 
